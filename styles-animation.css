@@ -1,0 +1,102 @@
+/* Базові стилі для анімованих елементів */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+}
+
+/* Анімація появи знизу */
+.fade-up {
+    transform: translateY(50px);
+}
+
+.fade-up.animated {
+    transform: translateY(0);
+}
+
+/* Анімація появи зліва */
+.fade-right {
+    transform: translateX(-50px);
+}
+
+.fade-right.animated {
+    transform: translateX(0);
+}
+
+/* Анімація появи справа */
+.fade-left {
+    transform: translateX(50px);
+}
+
+.fade-left.animated {
+    transform: translateX(0);
+}
+
+/* Анімація збільшення */
+.scale-up {
+    transform: scale(0.8);
+}
+
+.scale-up.animated {
+    transform: scale(1);
+}
+
+/* Анімація для заголовків */
+.title-animation {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.title-animation.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Анімація для сервісів */
+.service-animation {
+    transform: translateY(40px);
+    opacity: 0;
+    transition-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+.service-animation.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Анімація для відгуків */
+.review-animation {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.review-animation.animated {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Анімація для кнопок */
+.button-animation {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.button-animation.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Анімація для іконок */
+.icon-animation {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon-animation.animated {
+    transform: scale(1);
+    opacity: 1;
+}
