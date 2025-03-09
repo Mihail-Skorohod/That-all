@@ -64,7 +64,26 @@
     </footer>
 
     <script>
-        // Той самий скрипт для анімації header'а
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+            const contactInfo = document.querySelector('.contact-info');
+    
+            navToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                contactInfo.classList.toggle('active');
+            });
+    
+            // Анімація для фіксованого header при прокрутці
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('main-header');
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        });
     </script>
 </body>
 </html>
